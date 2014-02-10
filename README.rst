@@ -17,7 +17,7 @@ _`Requirements`
 ::
 
     $ pip install impress
-    $ impress -i annual-report.rst -o annual-report
+    $ ./build me.rst
 
 .. _impress: https://github.com/gawel/impress/
 .. _`impress.js`: https://github.com/bartaz/impress.js
