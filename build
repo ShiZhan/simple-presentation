@@ -1,0 +1,10 @@
+#!/bin/sh
+impress -i $1 -o release
+if [ ! -f impress.js.zip ]; then
+  echo "impress.js lib not found!"
+  echo "download from github"
+  wget https://github.com/bartaz/impress.js/archive/master.zip -O impress.js.zip
+fi
+echo 'extracting impress.js lib'
+python unzip-impress-lib.py
+mv release/static/impress.js-master release/static/impress
