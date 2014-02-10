@@ -5,6 +5,8 @@ if [ ! -f impress.js.zip ]; then
   echo "download from github"
   wget https://github.com/bartaz/impress.js/archive/master.zip -O impress.js.zip
 fi
-echo 'extracting impress.js lib'
-python unzip-impress-lib.py
-mv release/static/impress.js-master release/static/impress
+if [ ! -f release/static/impress/js/impress.js ]; then
+  echo 'extracting impress.js lib'
+  python unzip-impress-lib.py
+  mv release/static/impress.js-master release/static/impress
+fi
